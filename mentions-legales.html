@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions légales — FireCamp</title>
+    <style>
+        /* RESET & BASE */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #6c63ff33, #f5f5f5);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #6c63ff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #ff6584;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 1rem 1rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #6c63ff;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            border-radius: 12px;
+            padding: 1.8rem 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        section:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        section h2 {
+            margin-bottom: 1rem;
+            color: #6c63ff;
+            font-size: 1.5rem;
+        }
+
+        section p,
+        section ul {
+            font-size: 1rem;
+            color: #6c63ff;
+        }
+
+        section ul {
+            margin-left: 1.5rem;
+            list-style-type: disc;
+        }
+
+        footer {
+            padding: 2rem;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(12px);
+            margin-top: 2rem;
+        }
+
+        footer p {
+            color: #6c63ff;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 1.2rem 1rem;
+            }
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #6c63ff;
+            color: #fff;
+            padding: 0.6rem 1rem;
+            border-radius: 8px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, background 0.3s;
+            z-index: 1000;
+        }
+
+        .back-btn:hover {
+            background: #ff6584;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Mentions légales</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Éditeur du site</h2>
+            <p>Le site FireCamp est édité par :</p>
+            <ul>
+                <li><strong>Nom :</strong> Johan Lambert</li>
+                <li><strong>Adresse :</strong> Tours, France</li>
+                <li><strong>Email :</strong> <a href="mailto:contact@firecamp.fr">contact@firecamp.fr</a></li>
+                <li><strong>Téléphone :</strong> +33 6 00 00 00 00</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Hébergement</h2>
+            <p>Le site est hébergé par :</p>
+            <ul>
+                <li><strong>Nom :</strong> OVHcloud</li>
+                <li><strong>Adresse :</strong> 2 Rue Kellermann, 59100 Roubaix, France</li>
+                <li><strong>Site web :</strong> <a href="https://www.ovh.com" target="_blank">www.ovh.com</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Propriété intellectuelle</h2>
+            <p>Tous les contenus présents sur ce site (textes, images, logos, vidéos, code source, etc.) sont la
+                propriété exclusive de FireCamp ou de ses partenaires et sont protégés par le droit d’auteur. Toute
+                reproduction ou utilisation sans autorisation est interdite.</p>
+        </section>
+
+        <section>
+            <h2>Responsabilité</h2>
+            <p>FireCamp s'efforce de fournir des informations fiables et à jour. Toutefois, la responsabilité de
+                FireCamp ne peut être engagée en cas d'erreurs ou d'omissions sur le site.</p>
+        </section>
+
+        <section>
+            <h2>Protection des données personnelles</h2>
+            <p>Les données collectées via le site (formulaires de contact, newsletter, etc.) sont utilisées uniquement
+                pour répondre à vos demandes et ne sont jamais transmises à des tiers. Conformément au RGPD, vous pouvez
+                demander la suppression de vos données en contactant <a
+                    href="mailto:contact@firecamp.fr">contact@firecamp.fr</a>.</p>
+        </section>
+
+        <section>
+            <h2>Liens externes</h2>
+            <p>Le site peut contenir des liens vers d’autres sites. FireCamp n’est pas responsable du contenu de ces
+                sites externes.</p>
+        </section>
+        <a href="index.html" class="back-btn">← Retour au site</a>
+
+    </main>
+
+    <footer>
+        <p>© 2025 FireCamp Web — Tous droits réservés.</p>
+    </footer>
+
+</body>
+
+</html>
