@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Page principale -->
+  <url>
+    <loc>https://firecamp-official.github.io/FireCampWeb/</loc>
+    <lastmod>2025-11-11</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- Sections internes -->
+  <url>
+    <loc>https://firecamp-official.github.io/FireCampWeb/index.html#hero</loc>
+    <lastmod>2025-11-11</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://firecamp-official.github.io/FireCampWeb/index.html#offers</loc>
+    <lastmod>2025-11-11</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://firecamp-official.github.io/FireCampWeb/index.html#projects</loc>
+    <lastmod>2025-11-11</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://firecamp-official.github.io/FireCampWeb/index.html#stack</loc>
+    <lastmod>2025-11-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://firecamp-official.github.io/FireCampWeb/index.html#contact</loc>
+    <lastmod>2025-11-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Page secondaire -->
+  <url>
+    <loc>https://firecamp-official.github.io/FireCampWeb/mentions-legales.html</loc>
+    <lastmod>2025-11-11</lastmod>
+    <priority>0.6</priority>
+  </url>
+</urlset>
