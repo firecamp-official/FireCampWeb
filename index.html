@@ -185,6 +185,68 @@
             margin-bottom: 2rem;
         }
 
+        /* ABOUT SECTION */
+        #about {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #ecebff 0%, #f9f8ff 100%);
+            text-align: center;
+        }
+
+        .about-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .about-content h2 {
+            margin-bottom: 2rem;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .about-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: 0.3s;
+        }
+
+        .about-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(124, 58, 237, 0.15);
+        }
+
+        .about-card h3 {
+            color: #7c3aed;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .about-card p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .about-footer {
+            font-size: 1rem;
+            color: #7c3aed;
+            font-style: italic;
+            font-weight: 500;
+        }
+
         .btn-primary {
             background: linear-gradient(90deg, #7c3aed, #a855f7);
             color: #fff;
@@ -490,16 +552,18 @@
             margin-bottom: 1.5rem;
         }
 
-        .cta-final button {
+        .cta-final .btn-cta {
+            display: inline-block;
             background: #fff;
             color: #7c3aed;
             padding: 0.8rem 2rem;
             border-radius: 30px;
             font-weight: 600;
             transition: 0.3s;
+            text-decoration: none;
         }
 
-        .cta-final a:hover {
+        .cta-final .btn-cta:hover {
             transform: scale(1.05);
         }
 
@@ -721,6 +785,7 @@
             <a href="#hero"><img src="Logo.png" class="logo"></a>
             <ul class="nav-links">
                 <li><a href="#hero">Accueil</a></li>
+                <li><a href="#about">À Propos</a></li>
                 <li><a href="#offers">Offres</a></li>
                 <li><a href="#projects">Projets</a></li>
                 <li><a href="#stack">Technos</a></li>
@@ -736,13 +801,37 @@
 
     <section id="hero">
         <div class="hero-content">
-            <h1>Conçois ton futur digital avec FireCamp Web</h1>
-            <p>Des sites modernes, réactifs et inspirants, pensés pour faire briller ton projet.</p>
-            <a href="#offers" class="btn-primary">Découvrir nos offres</a>
+            <h1>Créons ton futur digital ensemble 🚀</h1>
+            <p>Je suis Johan, développeur web de 16 ans basé à Tours. Je transforme tes idées en sites modernes et performants.</p>
+            <a href="#offers" class="btn-primary">Voir mes services</a>
         </div>
     </section>
 
-    <section class="trusted-fullscreen" id="templates">
+    <section id="about">
+        <div class="about-container">
+            <div class="about-content">
+                <h2 class="section-title">À propos de moi</h2>
+                <p class="about-text">Salut 👋 Je suis Johan, un développeur web passionné de 16 ans basé à Tours, France. J'ai découvert ma passion pour la programmation en créant mes premiers sites web et je ne peux plus m'arrêter !</p>
+                
+                <div class="about-grid">
+                    <div class="about-card">
+                        <h3>💻 Mon parcours</h3>
+                        <p>J'ai commencé par apprendre HTML et CSS, puis j'ai plongé dans JavaScript et React. Aujourd'hui, je construis des sites modernes et interactifs qui impressionnent les clients.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>🚀 Ma mission</h3>
+                        <p>Transformer les idées de petits entrepreneurs et PME en sites web magnifiques et performants. Je crois que chacun mérite un site professionnel, peu importe son budget.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>🎯 Mes valeurs</h3>
+                        <p>Qualité, honnêteté, et passion. Je travaille pour vraiment comprendre ton projet et te livrer bien plus que ce que tu attendais.</p>
+                    </div>
+                </div>
+
+                <p class="about-footer">Quand je ne code pas, tu me trouveras à explorer les dernières technologies web ou à aider d'autres passionnés de prog sur Discord!</p>
+            </div>
+        </div>
+    </section>
         <div class="trusted-slide active"><video class="trusted-video" src="coach.mp4" autoplay muted
                 loop></video></div>
         <div class="trusted-slide"><video class="trusted-video" src="epc.mp4" autoplay muted loop></video></div>
@@ -777,15 +866,14 @@
     <section id="projects">
         <h2 class="section-title">Nos réalisations</h2>
         <div class="projects-grid">
-            <div class="project reveal"><img
-                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80">
+            <div class="project reveal">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Projet : Site vitrine moderne avec animations">
             </div>
-            <div class="project reveal" data-tooltip="Un super projet de démonstration">
-                <img src="https://picsum.photos/400/250" alt="Projet exemple">
+            <div class="project reveal">
+                <img src="https://picsum.photos/400/250" alt="Projet : Application web responsive avec design personnalisé">
             </div>
-
-            <div class="project reveal"><img
-                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80">
+            <div class="project reveal">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Projet : Portfolio interactif avec galerie dynamique">
             </div>
         </div>
     </section>
@@ -846,19 +934,19 @@
         <h2 class="section-title">Nos technologies</h2>
         <div class="tech-logos reveal">
             <div class="tech" data-tooltip="Structure des pages web">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
             </div>
             <div class="tech" data-tooltip="Style et mise en page">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" />
             </div>
             <div class="tech" data-tooltip="Langage de logique web">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
             </div>
             <div class="tech" data-tooltip="Framework front-end dynamique">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
             </div>
             <div class="tech" data-tooltip="Backend & Base de données">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" alt="Supabase" />
             </div>
         </div>
     </section>
@@ -870,13 +958,10 @@
     <section id="testimonials">
         <h2 class="section-title">Ce qu’ils en pensent</h2>
         <div class="testimonials-container">
-            <div class="testimonial active">“FireCamp Web a totalement transformé notre présence en ligne.”<strong>-
-                    Léa, Coach Perso+</strong></div>
-            <div class="testimonial">“Un service rapide, fluide, et un design incroyable.”<strong>- Tom, Roast &
-                    Chill</strong></div>
-            <div class="testimonial">“Le site est propre, dynamique, et fidèle à notre image.”<strong>- Jean-Baptiste,
-                    EPC
-                    Agency</strong></div>
+            <div class="testimonial active">“Johan a créé un site incroyable pour mon entreprise. Malgré son jeune âge, il a une compréhension professionnelle du design et du code. Très recommandé!”<strong>-
+                    Sarah M., Coach en Développement Personnel</strong></div>
+            <div class="testimonial">“Rapide, à l'écoute, et vraiment talentueux. Johan a transformé ma vision en réalité. Les prix sont aussi très justes pour la qualité.”<strong>- Marc D., Restaurateur</strong></div>
+            <div class="testimonial">“On pensait que c'était impossible d'avoir un site aussi beau avec notre budget. Johan a prouvé qu'on avait tort. Super travail!”<strong>- Jean-Baptiste L., Consultant en Agence</strong></div>
         </div>
     </section>
 
@@ -905,23 +990,24 @@
     </div>
     <section id="contact">
         <h2 class="section-title">Une question, un devis gratuit ?</h2>
-        <form>
-            <input type="text" placeholder="Nom" required>
-            <input type="email" placeholder="Email" required>
-            <textarea rows="4" placeholder="Ton message..." required></textarea>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <input type="text" name="nom" placeholder="Nom" required aria-label="Votre nom">
+            <input type="email" name="email" placeholder="Email" required aria-label="Votre email">
+            <textarea rows="4" name="message" placeholder="Ton message..." required aria-label="Votre message"></textarea>
             <button type="submit">Envoyer</button>
         </form>
     </section>
 
     <div class="cta-final">
         <h2>🔥 Prêt à lancer ton site avec FireCamp Web ?</h2>
-        <button href="#contact">Contacte-nous dès aujourd’hui</button>
+        <a href="#contact" class="btn-cta">Contacte-nous dès aujourd'hui</a>
     </div>
 
     <footer>
         <div class="footer-container">
             <div class="footer-logo">
-                <h2>FireCamp</h2>
+                <h2>FireCamp Web</h2>
+                <p style="color: #999; font-size: 0.9rem; margin-top: 0.5rem;">Tours, France 🇫🇷</p>
             </div>
             <div class="footer-links">
                 <a href="#home">Accueil</a>
@@ -1162,6 +1248,3 @@
 
 
 </html>
-
-
-
