@@ -10,15 +10,15 @@
     <meta name="keywords" content="FireCamp, site web, portfolio, HTML, CSS, JavaScript, React, Supabase, technologies">
     <meta name="author" content="Johan Lambert">
     <meta name="google-site-verification" content="HtTgTwb_kOUfmIiZxDFmpkP2jfba7LFrlAMiLVNXCbA" />
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TV9H2HE7EC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TV9H2HE7EC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-TV9H2HE7EC');
-</script>
+        gtag('config', 'G-TV9H2HE7EC');
+    </script>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
@@ -48,734 +48,7 @@
         content="FireCamp Web - Création de sites vitrines futuristes et interactifs. Portfolio, projets et technologies modernes.">
     <meta name="twitter:image" content="/favicon-96x96.png">
 
-    <style>
-        /* RESET */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
-        body,
-        html {
-            overflow-x: hidden;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: #f9f8ff;
-            color: #333;
-
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        /* HEADER */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            backdrop-filter: blur(15px);
-            background: rgba(255, 255, 255, 0.15);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-        }
-
-        .header-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-        }
-
-        .logo {
-            width: 90px;
-            height: auto;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-links li a {
-            color: #6c63ff;
-            font-weight: 500;
-            position: relative;
-            transition: 0.3s;
-        }
-
-        .nav-links li a::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -4px;
-            width: 0;
-            height: 2px;
-            background: #8b5cf6;
-            transition: 0.3s;
-        }
-
-        .nav-links li a:hover::after {
-            width: 100%;
-        }
-
-        /* BURGER MENU */
-        .burger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-        }
-
-        .burger div {
-            width: 25px;
-            height: 3px;
-            background: #8b5cf6;
-            transition: 0.3s;
-        }
-
-        .burger.toggle div:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-
-        .burger.toggle div:nth-child(2) {
-            opacity: 0;
-        }
-
-        .burger.toggle div:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -5px);
-        }
-
-        /* HERO */
-        #hero {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: linear-gradient(135deg, #f9f8ff 0%, #ecebff 100%);
-            padding: 0 1rem;
-            margin-top: 60px;
-        }
-
-        .hero-content {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 1s forwards 0.4s;
-        }
-
-        .hero-content h1 {
-            font-size: 3rem;
-            color: #7c3aed;
-            margin-bottom: 1rem;
-        }
-
-        .hero-content p {
-            font-size: 1.3rem;
-            color: #6c63ff;
-            margin-bottom: 2rem;
-        }
-
-        /* ABOUT SECTION */
-        #about {
-            padding: 6rem 2rem;
-            background: linear-gradient(135deg, #ecebff 0%, #f9f8ff 100%);
-            text-align: center;
-        }
-
-        .about-container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .about-content h2 {
-            margin-bottom: 2rem;
-        }
-
-        .about-text {
-            font-size: 1.1rem;
-            color: #555;
-            margin-bottom: 3rem;
-            line-height: 1.8;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .about-card {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: 0.3s;
-        }
-
-        .about-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(124, 58, 237, 0.15);
-        }
-
-        .about-card h3 {
-            color: #7c3aed;
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-        }
-
-        .about-card p {
-            color: #666;
-            line-height: 1.6;
-            font-size: 0.95rem;
-        }
-
-        .about-footer {
-            font-size: 1rem;
-            color: #7c3aed;
-            font-style: italic;
-            font-weight: 500;
-        }
-
-        .btn-primary {
-            background: linear-gradient(90deg, #7c3aed, #a855f7);
-            color: #fff;
-            padding: 0.9rem 2.3rem;
-            border-radius: 40px;
-            font-weight: 600;
-            transition: 0.3s;
-            box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 0 20px rgba(139, 92, 246, 0.6);
-        }
-
-        /* CARROUSEL VIDÉO */
-        .trusted-fullscreen {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .trusted-slide {
-            position: absolute;
-            inset: 0;
-            opacity: 0;
-            transform: scale(1.05);
-            transition: opacity 1s ease, transform 1s ease;
-        }
-
-        .trusted-slide.active {
-            opacity: 1;
-            transform: scale(1);
-            z-index: 2;
-        }
-
-        .trusted-video {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* OFFRES */
-        #offers {
-            padding: 6rem 2rem;
-            background: #faf9ff;
-            text-align: center;
-        }
-
-        .section-title {
-            font-size: 2.2rem;
-            color: #7c3aed;
-            margin-bottom: 3rem;
-            text-align: center;
-        }
-
-        .offers-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .offer-card {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 2rem;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-            transition: 0.3s;
-        }
-
-        .offer-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.2);
-        }
-
-        .offer-card h3 {
-            color: #6c63ff;
-            margin-bottom: 1rem;
-        }
-
-        .offer-card p {
-            color: #555;
-            margin-bottom: 1.5rem;
-        }
-
-        .offer-card span {
-            font-weight: 700;
-            color: #7c3aed;
-            font-size: 1.2rem;
-        }
-
-        /* RÉALISATIONS */
-        #projects {
-            padding: 6rem 2rem;
-            background: #f4f3ff;
-            text-align: center;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .project {
-            position: relative;
-            overflow: hidden;
-            border-radius: 15px;
-        }
-
-        .project img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: 0.4s;
-        }
-
-        .project:hover img {
-            transform: scale(1.1);
-        }
-
-        .project::after {
-            content: "Voir le projet";
-            position: absolute;
-            inset: 0;
-            background: rgba(124, 58, 237, 0.4);
-            color: #fff;
-            font-weight: 600;
-            opacity: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: 0.4s;
-        }
-
-        .project:hover::after {
-            opacity: 1;
-        }
-
-        /* TECHNOS */
-        /* TECHNOS */
-        #stack {
-            padding: 6rem 2rem;
-            text-align: center;
-        }
-
-        .tech-logos {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .tech {
-            position: relative;
-            display: inline-block;
-        }
-
-        .tech img {
-            height: 60px;
-            opacity: 0.7;
-            transition: 0.3s;
-        }
-
-        .tech:hover img {
-            opacity: 1;
-            transform: scale(1.1);
-        }
-
-        .tech::after {
-            content: attr(data-tooltip);
-            position: absolute;
-            bottom: -35px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #111;
-            color: white;
-            padding: 6px 10px;
-            font-size: 0.8rem;
-            border-radius: 6px;
-            white-space: nowrap;
-            opacity: 0;
-            pointer-events: none;
-            transition: 0.2s ease-in-out;
-        }
-
-        .tech:hover::after {
-            opacity: 1;
-        }
-
-
-
-        /* TÉMOIGNAGES */
-        #testimonials {
-            background: #faf9ff;
-            padding: 6rem 2rem;
-            text-align: center;
-        }
-
-        .testimonials-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .testimonial {
-            display: none;
-            font-style: italic;
-            color: #555;
-        }
-
-        .testimonial.active {
-            display: block;
-            animation: fadeInUp 0.8s ease forwards;
-        }
-
-        .testimonial strong {
-            display: block;
-            margin-top: 1rem;
-            color: #7c3aed;
-        }
-
-        /* FAQ */
-        #faq {
-            padding: 6rem 2rem;
-            background: #f4f3ff;
-        }
-
-        .faq-item {
-            max-width: 800px;
-            margin: 1rem auto;
-            background: rgba(255, 255, 255, 0.7);
-            border-radius: 15px;
-            padding: 1.2rem 1.5rem;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        .faq-item h4 {
-            color: #6c63ff;
-        }
-
-        .faq-item p {
-            display: none;
-            margin-top: 0.5rem;
-            color: #444;
-        }
-
-        /* CONTACT + CTA */
-        #contact {
-            padding: 6rem 2rem;
-            text-align: center;
-            background: #faf9ff;
-        }
-
-        form {
-            max-width: 500px;
-            margin: 2rem auto 0;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        input,
-        textarea {
-            padding: 0.8rem 1rem;
-            border-radius: 15px;
-            border: 1px solid #ddd;
-            outline: none;
-        }
-
-        button {
-            background: linear-gradient(90deg, #7c3aed, #a855f7);
-            color: #fff;
-            padding: 0.8rem 2rem;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        button:hover {
-            transform: translateY(-3px);
-        }
-
-        .cta-final {
-            background: linear-gradient(135deg, #7c3aed, #a855f7);
-            color: #fff;
-            text-align: center;
-            padding: 5rem 2rem;
-        }
-
-        .cta-final h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .cta-final .btn-cta {
-            display: inline-block;
-            background: #fff;
-            color: #7c3aed;
-            padding: 0.8rem 2rem;
-            border-radius: 30px;
-            font-weight: 600;
-            transition: 0.3s;
-            text-decoration: none;
-        }
-
-        .cta-final .btn-cta:hover {
-            transform: scale(1.05);
-        }
-
-        footer {
-            padding: 3rem 2rem 2rem;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(12px);
-            text-align: center;
-            color: #fff;
-            font-family: sans-serif;
-        }
-
-        .footer-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .footer-logo h2 {
-            color: #6c63ff;
-            margin: 0;
-        }
-
-        .footer-links a,
-        .footer-socials a {
-            color: #1d1d1d;
-            text-decoration: none;
-            margin: 0 0.8rem;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover,
-        .footer-socials a:hover {
-            color: #6c63ff;
-        }
-
-        .footer-socials a svg {
-            vertical-align: middle;
-            fill: currentColor;
-            transition: transform 0.3s, color 0.3s;
-        }
-
-        .footer-socials a:hover svg {
-            transform: scale(1.2);
-            color: #6c63ff;
-        }
-
-        footer p {
-            font-size: 0.9rem;
-            color: #aaa;
-            margin: 0;
-        }
-
-
-
-        /* ANIMATIONS */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .nav-links {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 100%;
-                height: 100vh;
-                background: rgba(255, 255, 255, 0.95);
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                transition: 0.4s;
-                gap: 2rem;
-            }
-
-            .nav-links.active {
-                right: 0;
-            }
-
-            .burger {
-                display: flex;
-            }
-        }
-
-        #skills-showcase {
-            padding: 6rem 2rem;
-            background: #f4f3ff;
-            text-align: center;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .skill-card {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 2rem;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-            transition: 0.3s;
-            cursor: pointer;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.2);
-        }
-
-        .skill-card h3 {
-            color: #6c63ff;
-            margin-bottom: 1rem;
-        }
-
-        .skill-card p {
-            color: #555;
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-
-        .chat-widget {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 320px;
-            z-index: 1000;
-        }
-
-        .chat-header {
-            background: #6a0dad;
-            color: #fff;
-            padding: 10px;
-            border-radius: 10px 10px 0 0;
-            cursor: pointer;
-        }
-
-        .chat-body {
-            background: #fff;
-            max-height: 400px;
-            overflow-y: auto;
-            padding: 10px;
-            border-radius: 0 0 10px 10px;
-            display: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .message {
-            margin: 10px 0;
-            padding: 8px 12px;
-            border-radius: 10px;
-            max-width: 80%;
-        }
-
-        .robot {
-            background: #eee;
-            align-self: flex-start;
-        }
-
-        .user {
-            background: #6a0dad;
-            color: #fff;
-            align-self: flex-end;
-        }
-
-        .options {
-            margin-top: 10px;
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
-
-        .options button {
-            padding: 8px;
-            border: none;
-            border-radius: 5px;
-            background: #6a0dad;
-            color: #fff;
-            cursor: pointer;
-            text-align: left;
-        }
-
-        .options button:hover {
-            background: #4b007f;
-        }
-
-        .chat-messages {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
-
-        .chat-header-minibot {
-            margin-bottom: -14px;
-            width: 70px;
-            height: auto;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
@@ -785,7 +58,6 @@
             <a href="#hero"><img src="Logo.png" class="logo"></a>
             <ul class="nav-links">
                 <li><a href="#hero">Accueil</a></li>
-                <li><a href="#about">À Propos</a></li>
                 <li><a href="#offers">Offres</a></li>
                 <li><a href="#projects">Projets</a></li>
                 <li><a href="#stack">Technos</a></li>
@@ -801,44 +73,22 @@
 
     <section id="hero">
         <div class="hero-content">
-            <h1>Créons ton futur digital ensemble 🚀</h1>
-            <p>Je suis Johan, développeur web de 16 ans basé à Tours. Je transforme tes idées en sites modernes et performants.</p>
-            <a href="#offers" class="btn-primary">Voir mes services</a>
+            <h1>Conçois ton futur digital avec FireCamp Web</h1>
+            <p>Des sites modernes, réactifs et inspirants, pensés pour faire briller ton projet.</p>
+            <a href="#offers" class="btn-primary">Découvrir nos offres</a>
         </div>
     </section>
 
-    <section id="about">
-        <div class="about-container">
-            <div class="about-content">
-                <h2 class="section-title">À propos de moi</h2>
-                <p class="about-text">Salut 👋 Je suis Johan, un développeur web passionné de 16 ans basé à Tours, France. J'ai découvert ma passion pour la programmation en créant mes premiers sites web et je ne peux plus m'arrêter !</p>
-                
-                <div class="about-grid">
-                    <div class="about-card">
-                        <h3>💻 Mon parcours</h3>
-                        <p>J'ai commencé par apprendre HTML et CSS, puis j'ai plongé dans JavaScript et React. Aujourd'hui, je construis des sites modernes et interactifs qui impressionnent les clients.</p>
-                    </div>
-                    <div class="about-card">
-                        <h3>🚀 Ma mission</h3>
-                        <p>Transformer les idées de petits entrepreneurs et PME en sites web magnifiques et performants. Je crois que chacun mérite un site professionnel, peu importe son budget.</p>
-                    </div>
-                    <div class="about-card">
-                        <h3>🎯 Mes valeurs</h3>
-                        <p>Qualité, honnêteté, et passion. Je travaille pour vraiment comprendre ton projet et te livrer bien plus que ce que tu attendais.</p>
-                    </div>
-                </div>
 
-                <p class="about-footer">Quand je ne code pas, tu me trouveras à explorer les dernières technologies web ou à aider d'autres passionnés de prog sur Discord!</p>
-            </div>
+
+    <section class="trusted-fullscreen" id="templates">
+        <div class="trusted-slide active"><video class="trusted-video" src="coach.mp4" autoplay muted loop></video>
         </div>
-    </section>
-        <div class="trusted-slide active"><video class="trusted-video" src="coach.mp4" autoplay muted
-                loop></video></div>
         <div class="trusted-slide"><video class="trusted-video" src="epc.mp4" autoplay muted loop></video></div>
         <div class="trusted-slide"><video class="trusted-video" src="portfolio.mp4" autoplay muted loop></video>
         </div>
-        <div class="trusted-slide"><video class="trusted-video" src="roastandchill.mp4" autoplay muted
-                loop></video></div>
+        <div class="trusted-slide"><video class="trusted-video" src="roastandchill.mp4" autoplay muted loop></video>
+        </div>
     </section>
 
     <section id="offers">
@@ -860,108 +110,251 @@
                 <p>Ajouter des fonctionnalités sur mesure et personnaliser ton site selon tes besoins.</p>
                 <span>à partir de 50€</span>
             </div>
+
+
+
+
+
+
+
+
         </div>
+    </section>
+    <!-- SERVICES DÉTAILLÉS (extracted from scriptBotFAQ.js) -->
+    <section id="services-detailles" style="background:#ffffff;padding:2rem 1rem 3rem;">
+        <div class="accordion">
+            <h2 class="section-title">Services détaillés & Packs</h2>
+
+            <div class="accordion-items">
+
+                <div class="accordion-item" data-key="templates">
+                    <div class="accordion-header">
+                        <h4>Sites à partir de templates</h4>
+                        <svg class="chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9l6 6 6-6" stroke="#6c63ff" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Voici nos options de templates détaillées :</p>
+                        <ul class="accordion-list">
+                            <li><strong>Simple – 3 pages – 250€</strong><br>- Pages incluses : Landing, texte
+                                simple, responsive<br>- Pages supplémentaires : 50€/page<br>- Idéal pour un site
+                                rapide et clair. Options : galerie, auto-reply.</li>
+                            <li><strong>Avancé – 3 pages – 400€</strong><br>- Sections interactives, animations
+                                CSS/JS<br>- Pages sup. : 75€/page<br>- Ajouts moyens : chat simple, slider
+                                dynamique.</li>
+                            <li><strong>Premium – 3 pages – 600€</strong><br>- Design premium, sections
+                                dynamiques<br>- Pages sup. : 100€/page<br>- Fonctionnalités complexes possibles.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item" data-key="custom-sites">
+                    <div class="accordion-header">
+                        <h4>Sites personnalisés</h4>
+                        <svg class="chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9l6 6 6-6" stroke="#6c63ff" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="accordion-content">
+                        <ul class="accordion-list">
+                            <li><strong>5 pages – 700€</strong> — Design personnalisé, responsive. Pages sup.
+                                100€/page.</li>
+                            <li><strong>10 pages – 1200€</strong> — Site complet pour PME. Pages sup. 90€/page.
+                            </li>
+                            <li><strong>15 pages – 1700€</strong> — Site complet avec sections dynamiques.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item" data-key="features">
+                    <div class="accordion-header">
+                        <h4>Ajout de fonctionnalités</h4>
+                        <svg class="chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9l6 6 6-6" stroke="#6c63ff" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="accordion-content">
+                        <ul class="accordion-list">
+                            <li><strong>Simple – 50-100€</strong><br>Ex : menu interactif, galerie simple.</li>
+                            <li><strong>Moyen – 120-200€</strong><br>Ex : chatbot FAQ, formulaire tri +
+                                auto-reply, galerie filtrable.</li>
+                            <li><strong>Complexe – 250-400€</strong><br>Ex : intégration API, chat complet avec
+                                login.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item" data-key="plans">
+                    <div class="accordion-header">
+                        <h4>Forfaits mensuels</h4>
+                        <svg class="chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9l6 6 6-6" stroke="#6c63ff" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="accordion-content">
+                        <ul class="accordion-list">
+                            <li><strong>Basique – 30€/mois</strong> — 10 changements d'images + 10 de texte /
+                                mois.</li>
+                            <li><strong>Normal – 50€/mois</strong> — 20 changements d'images + 30 de texte /
+                                mois.</li>
+                            <li><strong>Premium – 90€/mois</strong> — 40 changements d'images + texte illimité.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item" data-key="packs">
+                    <div class="accordion-header">
+                        <h4>Packs complémentaires</h4>
+                        <svg class="chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9l6 6 6-6" stroke="#6c63ff" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="accordion-content">
+                        <ul class="accordion-list">
+                            <li><strong>Démarrage – 100€</strong> — Installation template, logo, couleurs,
+                                textes de base.</li>
+                            <li><strong>Visibilité – 150€</strong> — SEO de base + intégration réseaux sociaux.
+                            </li>
+                            <li><strong>Interactif – 200€</strong> — Une fonctionnalité interactive incluse
+                                (chat, formulaire avancé).</li>
+                            <li><strong>Support technique – 50€/mois</strong> — Maintenance, mises à jour,
+                                sauvegardes.</li>
+                        </ul>
+                    </div>
+                </div> <!-- .accordion-items -->
+
+            </div>
     </section>
 
     <section id="projects">
         <h2 class="section-title">Nos réalisations</h2>
         <div class="projects-grid">
-            <div class="project reveal">
-                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Projet : Site vitrine moderne avec animations">
-            </div>
-            <div class="project reveal">
-                <img src="https://picsum.photos/400/250" alt="Projet : Application web responsive avec design personnalisé">
-            </div>
-            <div class="project reveal">
-                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Projet : Portfolio interactif avec galerie dynamique">
+            <a href="Projet1.html">
+                <div class="project reveal"><img
+                        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80">
+                </div>
+            </a>
+
+
+            <a href="Projet2.html">
+                <div class="project reveal"><img
+                        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80">
+                </div>
+            </a>
+
+            <div class="project reveal"><img
+                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80">
             </div>
         </div>
     </section>
     <section id="skills-showcase">
-    <h2 class="section-title">Ce qu'il est possible d'ajouter sur votre site</h2>
-    <div class="skills-grid">
+        <h2 class="section-title">Ce qu'il est possible d'ajouter sur votre site</h2>
+        <div class="skills-grid">
 
-        <div class="skill-card" data-target="html">
-            <h3>HTML / Structure</h3>
-            <p class="skill-detail">Pages complètes, sémantique, formulaires interactifs, intégration de médias (images, vidéos, iframes).</p>
+            <div class="skill-card" data-target="html">
+                <h3>HTML / Structure</h3>
+                <p class="skill-detail">Pages complètes, sémantique, formulaires interactifs, intégration de médias
+                    (images, vidéos, iframes).</p>
+            </div>
+
+            <div class="skill-card" data-target="css">
+                <h3>CSS / Design</h3>
+                <p class="skill-detail">Layouts modernes (Flexbox, Grid), responsive, animations, hover effects,
+                    glassmorphism, thèmes clair/sombre.</p>
+            </div>
+
+            <div class="skill-card" data-target="js">
+                <h3>JavaScript / Interactions</h3>
+                <p class="skill-detail">DOM dynamique, carrousels, popups, menus burger, validation de formulaire, fetch
+                    API, effets et animations.</p>
+            </div>
+
+            <div class="skill-card" data-target="ts">
+                <h3>TypeScript / Typage</h3>
+                <p class="skill-detail">Typage de variables et fonctions, prévention d’erreurs, intégration JS → TS pour
+                    projets React ou Node.</p>
+            </div>
+
+            <div class="skill-card" data-target="supabase">
+                <h3>Supabase / Backend léger</h3>
+                <p class="skill-detail">Authentification (login/signup/OAuth), stockage, base de données, Realtime pour
+                    chat/forum, fonctions serveur légères.</p>
+            </div>
+
+            <div class="skill-card" data-target="interactive">
+                <h3>Espaces interactifs</h3>
+                <p class="skill-detail">Chat en direct, commentaires, forums, votes, classements, notifications,
+                    contenus dynamiques pour membres.</p>
+            </div>
+
+            <div class="skill-card" data-target="media">
+                <h3>Media & Realtime</h3>
+                <p class="skill-detail">Galeries dynamiques, vidéos, uploads sécurisés, flux Realtime pour expériences
+                    interactives et gamifiées.</p>
+            </div>
+
+            <div class="skill-card" data-target="gamification">
+                <h3>Projets gamifiés / communautaires</h3>
+                <p class="skill-detail">Fire Camp style missions, suivi XP, leaderboards, missions filtrées par rang,
+                    notifications et challenge en temps réel.</p>
+            </div>
+
+            <div class="skill-card" data-target="faq">
+                <h3>FAQ personnalisé</h3>
+                <p class="skill-detail">Répondre à vos besoins et celles de vos futurs clients. Des questions et des
+                    réponses dans un format personnalisé.</p>
+            </div>
+
         </div>
-
-        <div class="skill-card" data-target="css">
-            <h3>CSS / Design</h3>
-            <p class="skill-detail">Layouts modernes (Flexbox, Grid), responsive, animations, hover effects, glassmorphism, thèmes clair/sombre.</p>
-        </div>
-
-        <div class="skill-card" data-target="js">
-            <h3>JavaScript / Interactions</h3>
-            <p class="skill-detail">DOM dynamique, carrousels, popups, menus burger, validation de formulaire, fetch API, effets et animations.</p>
-        </div>
-
-        <div class="skill-card" data-target="ts">
-            <h3>TypeScript / Typage</h3>
-            <p class="skill-detail">Typage de variables et fonctions, prévention d’erreurs, intégration JS → TS pour projets React ou Node.</p>
-        </div>
-
-        <div class="skill-card" data-target="supabase">
-            <h3>Supabase / Backend léger</h3>
-            <p class="skill-detail">Authentification (login/signup/OAuth), stockage, base de données, Realtime pour chat/forum, fonctions serveur légères.</p>
-        </div>
-
-        <div class="skill-card" data-target="interactive">
-            <h3>Espaces interactifs</h3>
-            <p class="skill-detail">Chat en direct, commentaires, forums, votes, classements, notifications, contenus dynamiques pour membres.</p>
-        </div>
-
-        <div class="skill-card" data-target="media">
-            <h3>Media & Realtime</h3>
-            <p class="skill-detail">Galeries dynamiques, vidéos, uploads sécurisés, flux Realtime pour expériences interactives et gamifiées.</p>
-        </div>
-
-        <div class="skill-card" data-target="gamification">
-            <h3>Projets gamifiés / communautaires</h3>
-            <p class="skill-detail">Fire Camp style missions, suivi XP, leaderboards, missions filtrées par rang, notifications et challenge en temps réel.</p>
-        </div>
-
-        <div class="skill-card" data-target="faq">
-            <h3>FAQ personnalisé</h3>
-            <p class="skill-detail">Répondre à vos besoins et celles de vos futurs clients. Des questions et des réponses dans un format personnalisé.</p>
-        </div>
-
-    </div>
-</section>
+    </section>
 
 
     <section id="stack">
         <h2 class="section-title">Nos technologies</h2>
         <div class="tech-logos reveal">
             <div class="tech" data-tooltip="Structure des pages web">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
             </div>
             <div class="tech" data-tooltip="Style et mise en page">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
             </div>
             <div class="tech" data-tooltip="Langage de logique web">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
             </div>
             <div class="tech" data-tooltip="Framework front-end dynamique">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
             </div>
             <div class="tech" data-tooltip="Backend & Base de données">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" alt="Supabase" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" />
             </div>
         </div>
     </section>
 
 
 
-
+    <div class="cta-final">
+        <h2>🔥 Prêt à lancer ton site avec FireCamp Web ?</h2>
+        <button href="#contact">Contacte-nous dès aujourd’hui</button>
+    </div>
 
     <section id="testimonials">
         <h2 class="section-title">Ce qu’ils en pensent</h2>
         <div class="testimonials-container">
-            <div class="testimonial active">“Johan a créé un site incroyable pour mon entreprise. Malgré son jeune âge, il a une compréhension professionnelle du design et du code. Très recommandé!”<strong>-
-                    Sarah M., Coach en Développement Personnel</strong></div>
-            <div class="testimonial">“Rapide, à l'écoute, et vraiment talentueux. Johan a transformé ma vision en réalité. Les prix sont aussi très justes pour la qualité.”<strong>- Marc D., Restaurateur</strong></div>
-            <div class="testimonial">“On pensait que c'était impossible d'avoir un site aussi beau avec notre budget. Johan a prouvé qu'on avait tort. Super travail!”<strong>- Jean-Baptiste L., Consultant en Agence</strong></div>
+            <div class="testimonial active">“FireCamp Web a totalement transformé notre présence en ligne.”<strong>-
+                    Léa, Coach Perso+</strong></div>
+            <div class="testimonial">“Un service rapide, fluide, et un design incroyable.”<strong>- Tom, Roast &
+                    Chill</strong></div>
+            <div class="testimonial">“Le site est propre, dynamique, et fidèle à notre image.”<strong>- Jean-Baptiste,
+                    EPC
+                    Agency</strong></div>
         </div>
     </section>
 
@@ -980,6 +373,9 @@
             <p>Bien sûr ! Nous proposons un suivi mensuel pour garder ton site rapide, sûr et à jour.</p>
         </div>
     </section>
+
+
+
     <div class="chat-widget">
         <img src="minibot.png" class="chat-header-minibot">
         <div class="chat-header" id="chat-header"> Offre FireCamp Web</div>
@@ -988,26 +384,23 @@
             <div class="options" id="chat-options"></div>
         </div>
     </div>
+
     <section id="contact">
         <h2 class="section-title">Une question, un devis gratuit ?</h2>
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <input type="text" name="nom" placeholder="Nom" required aria-label="Votre nom">
-            <input type="email" name="email" placeholder="Email" required aria-label="Votre email">
-            <textarea rows="4" name="message" placeholder="Ton message..." required aria-label="Votre message"></textarea>
-            <button type="submit">Envoyer</button>
+        <form id="contact-form" style="max-width:600px;margin-top:1rem;">
+            <input type="text" name="from_name" placeholder="Nom" required>
+            <input type="email" name="from_email" placeholder="Email" required>
+            <textarea name="message" rows="4" placeholder="Votre message / besoin" required></textarea>
+            <button type="submit">Envoyer la demande</button>
         </form>
     </section>
 
-    <div class="cta-final">
-        <h2>🔥 Prêt à lancer ton site avec FireCamp Web ?</h2>
-        <a href="#contact" class="btn-cta">Contacte-nous dès aujourd'hui</a>
-    </div>
+
 
     <footer>
         <div class="footer-container">
             <div class="footer-logo">
-                <h2>FireCamp Web</h2>
-                <p style="color: #999; font-size: 0.9rem; margin-top: 0.5rem;">Tours, France 🇫🇷</p>
+                <h2>FireCamp</h2>
             </div>
             <div class="footer-links">
                 <a href="#home">Accueil</a>
@@ -1045,216 +438,101 @@
 
 
 
+    <script src="script.js"></script>
+    <script src="scriptBotFAQ.js"></script>
+
+    <!-- EMAILJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
-        // BURGER MENU
-        const burger = document.getElementById('burger');
-        const nav = document.querySelector('.nav-links');
-        burger.addEventListener('click', () => {
-            nav.classList.toggle('active');
-            burger.classList.toggle('toggle');
-        });
+        (function () {
+            // REMPLACEZ LES VALEURS EN MAJUSCULES AVEC VOS IDENTIFIANTS EMAILJS
+            emailjs.init('2lVDC0ezhk9im03Pk'); // <-- REMPLACEZ: EMAILJS_PUBLIC_KEY
+        })();
 
-        // SCROLL REVEAL
-        const reveals = document.querySelectorAll('.reveal');
-        const revealOnScroll = () => {
-            const trigger = window.innerHeight * 0.85;
-            reveals.forEach(r => {
-                const top = r.getBoundingClientRect().top;
-                if (top < trigger) r.style.animation = "fadeInUp 1s forwards";
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                // ENVOI via EmailJS — REMPLACEZ LES IDENTIFIANTS CI-DESSOUS
+                emailjs.sendForm('service_cjia1bd', 'template_e6og0fb', this)
+                    .then(function () {
+                        alert('Message envoyé ! Merci.');
+                        contactForm.reset();
+                        // Optionnel: rediriger vers une page de remerciement
+                        // window.location.href = 'MERCI_PAGE.html'; // <-- REMPLACEZ SI VOUS VOULEZ REDIRIGER
+                    }, function (error) {
+                        console.error('EmailJS error:', error);
+                        alert('Erreur lors de l\'envoi, veuillez réessayer plus tard.');
+                    });
             });
-        };
-        window.addEventListener('scroll', revealOnScroll);
-
-        // FAQ toggle
-        document.querySelectorAll('.faq-item').forEach(item => {
-            item.addEventListener('click', () => {
-                const p = item.querySelector('p');
-                p.style.display = p.style.display === 'block' ? 'none' : 'block';
-            });
-        });
-
-        // CAROUSEL
-        const slides = document.querySelectorAll('.trusted-slide');
-        let current = 0;
-        setInterval(() => {
-            slides[current].classList.remove('active');
-            current = (current + 1) % slides.length;
-            slides[current].classList.add('active');
-        }, 6000);
-
-        // TESTIMONIAL SLIDER
-        const testimonials = document.querySelectorAll('.testimonial');
-        let t = 0;
-        setInterval(() => {
-            testimonials[t].classList.remove('active');
-            t = (t + 1) % testimonials.length;
-            testimonials[t].classList.add('active');
-        }, 7000);
+        }
     </script>
     <script>
-        const chatHeader = document.getElementById('chat-header');
-        const chatBody = document.getElementById('chat-body');
-        const chatMessages = document.getElementById('chat-messages');
-        const chatOptions = document.getElementById('chat-options');
+        // Accordion toggle behavior for Services détaillés
+        (function () {
+            const accordion = document.querySelector('.accordion');
+            if (!accordion) return;
+            const itemsWrap = accordion.querySelector('.accordion-items');
+            const items = accordion.querySelectorAll('.accordion-item');
+            const title = accordion.querySelector('.section-title');
 
-        const faqTree = {
-            question: "Salut ! Je suis ton assistant Sparky ! Je suis là pour répondre à tes questions 💌😁",
-            options: [
-                {
-                    text: "Sites à partir de templates",
-                    response: "Voici nos options de templates détaillées :",
-                    next: [
-                        {
-                            text: "Simple (3 pages, 250€)",
-                            response: `**Simple – 3 pages – 250€**\n- Pages incluses : Landing, texte simple, responsive\n- Pages supplémentaires : 50€/page\n- Notes : idéal pour un site rapide et clair\n- Ajout de fonctionnalités simples (formulaire auto-reply, galerie simple) : 50-100€`,
-                            next: []
-                        },
-                        {
-                            text: "Avancé (3 pages, 400€)",
-                            response: `**Avancé – 3 pages – 400€**\n- Pages incluses : Landing, sections interactives, animations CSS/JS\n- Pages supplémentaires : 75€/page\n- Notes : parfait pour un site moderne avec animations\n- Ajout de fonctionnalités moyennes (chat simple, slider dynamique) : 120-200€`,
-                            next: []
-                        },
-                        {
-                            text: "Premium (3 pages, 600€)",
-                            response: `**Premium – 3 pages – 600€**\n- Pages incluses : Design premium, sections dynamiques, animations poussées\n- Pages supplémentaires : 100€/page\n- Notes : site haut de gamme pour un rendu pro\n- Ajout de fonctionnalités complexes (intégration API, chat complet) : 250-400€`,
-                            next: []
-                        }
-                    ]
-                },
-                {
-                    text: "Sites personnalisés",
-                    response: "Options sur-mesure avec détails :",
-                    next: [
-                        {
-                            text: "5 pages – 700€",
-                            response: `**5 pages – 700€**\n- Design personnalisé et responsive\n- Ajout de pages supplémentaires : 100€/page\n- Idéal pour un site moderne, adapté PME\n- Fonctionnalités : selon complexité (50-400€)`,
-                            next: []
-                        },
-                        {
-                            text: "10 pages – 1200€",
-                            response: `**10 pages – 1200€**\n- Design complet pour PME\n- Pages supplémentaires : 90€/page\n- Intégrations basiques incluses\n- Fonctionnalités : selon complexité (50-400€)`,
-                            next: []
-                        },
-                        {
-                            text: "15 pages – 1700€",
-                            response: `**15 pages – 1700€**\n- Site complet avec sections dynamiques et animation légère\n- Pages supplémentaires : 80€/page\n- Fonctionnalités : selon complexité (50-400€)`,
-                            next: []
-                        }
-                    ]
-                },
-                {
-                    text: "Ajout de fonctionnalités",
-                    response: "Voici les types et exemples :",
-                    next: [
-                        {
-                            text: "Simple – 50-100€",
-                            response: `Exemples :\n- Menu interactif / animations JS → 80€\n- Galerie simple → 50-100€`,
-                            next: []
-                        },
-                        {
-                            text: "Moyen – 120-200€",
-                            response: `Exemples :\n- Chatbot FAQ → 150€\n- Formulaire tri + auto-reply → 150€\n- Galerie filtrable dynamique → 180€`,
-                            next: []
-                        },
-                        {
-                            text: "Complexe – 250-400€",
-                            response: `Exemples :\n- Intégration API externe (paiement, maps…) → 300-400€\n- Chat complet avec login → 350€`,
-                            next: []
-                        }
-                    ]
-                },
-                {
-                    text: "Forfaits mensuels",
-                    response: "Maintenance & modifications :",
-                    next: [
-                        {
-                            text: "Basique – 30€/mois",
-                            response: `**Basique – 30€/mois**\n- 2 mois offerts\n- 10 changements d’images + 10 de texte / mois\n- Extras : 5€/modif`,
-                            next: []
-                        },
-                        {
-                            text: "Normal – 50€/mois",
-                            response: `**Normal – 50€/mois**\n- Choix payant\n- 20 changements d’images + 30 de texte / mois\n- Extras : 5€/modif`,
-                            next: []
-                        },
-                        {
-                            text: "Premium – 90€/mois",
-                            response: `**Premium – 90€/mois**\n- 1 mois offert\n- 40 changements d’images + texte illimité\n- Extras : 7€/modif`,
-                            next: []
-                        }
-                    ]
-                },
-                {
-                    text: "Packs complémentaires",
-                    response: "Optionnels :",
-                    next: [
-                        { text: "Démarrage – 100€", response: "Installation template, logo + couleurs + textes de base", next: [] },
-                        { text: "Visibilité – 150€", response: "SEO de base + intégration réseaux sociaux", next: [] },
-                        { text: "Interactif – 200€", response: "Une fonctionnalité interactive incluse (chat, formulaire avancé, galerie dynamique)", next: [] },
-                        { text: "Support technique – 50€/mois", response: "Maintenance, mises à jour, sauvegardes", next: [] }
-                    ]
-                }
-            ]
-        };
-
-        let currentNode = faqTree;
-
-        function showMessage(text, sender = "robot") {
-            const div = document.createElement('div');
-            div.classList.add('message', sender);
-            div.textContent = text;
-            chatMessages.appendChild(div);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-        }
-
-        function showOptions(options) {
-            chatOptions.innerHTML = '';
-            if (options.length === 0) {
-                const btn = document.createElement('button');
-                btn.textContent = "Recommencer";
-                btn.onclick = () => startChat();
-                chatOptions.appendChild(btn);
-            } else {
-                options.forEach(opt => {
-                    const btn = document.createElement('button');
-                    btn.textContent = opt.text;
-                    btn.onclick = () => {
-                        showMessage(opt.text, "user");
-                        showMessage(opt.response);
-                        currentNode = opt;
-                        showOptions(opt.next || []);
+            // Per-item toggles (single-open)
+            items.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+                const content = item.querySelector('.accordion-content');
+                if (!header || !content) return;
+                content.style.transition = 'max-height 0.35s ease';
+                content.style.overflow = 'hidden';
+                content.style.maxHeight = null;
+                header.addEventListener('click', () => {
+                    const isOpen = item.classList.contains('open');
+                    // close all
+                    items.forEach(i => {
+                        i.classList.remove('open');
+                        const c = i.querySelector('.accordion-content');
+                        if (c) c.style.maxHeight = null;
+                    });
+                    if (!isOpen) {
+                        item.classList.add('open');
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        setTimeout(() => item.scrollIntoView({ behavior: 'smooth', block: 'center' }), 220);
                     }
-                    chatOptions.appendChild(btn);
+                });
+            });
+
+            // Section-level toggle: click the title to fold/unfold all items (keeps title visible)
+            if (itemsWrap && title) {
+                title.style.cursor = 'pointer';
+                itemsWrap.style.overflow = 'hidden';
+                itemsWrap.style.transition = 'max-height 0.35s ease';
+                // initialize expanded maxHeight
+                itemsWrap.style.maxHeight = itemsWrap.scrollHeight + 'px';
+                let collapsed = false;
+                title.addEventListener('click', () => {
+                    collapsed = !collapsed;
+                    if (collapsed) {
+                        // close all items
+                        items.forEach(i => {
+                            const c = i.querySelector('.accordion-content');
+                            i.classList.remove('open');
+                            if (c) c.style.maxHeight = null;
+                        });
+                        itemsWrap.style.maxHeight = '0px';
+                        const chev = title.querySelector('.section-toggle-chev');
+                        if (chev) chev.style.transform = 'rotate(-90deg)';
+                    } else {
+                        itemsWrap.style.maxHeight = itemsWrap.scrollHeight + 'px';
+                        const chev = title.querySelector('.section-toggle-chev');
+                        if (chev) chev.style.transform = '';
+                    }
+                });
+                window.addEventListener('resize', () => {
+                    if (!collapsed) itemsWrap.style.maxHeight = itemsWrap.scrollHeight + 'px';
                 });
             }
-        }
-
-        function startChat() {
-            chatMessages.innerHTML = '';
-            currentNode = faqTree;
-            showMessage(currentNode.question);
-            showOptions(currentNode.options);
-        }
-
-        chatHeader.addEventListener('click', () => {
-            chatBody.style.display = chatBody.style.display === 'none' ? 'block' : 'none';
-        });
-
-        // Démarrage automatique
-        startChat();
-
+        })();
     </script>
 </body>
 
 
 </html>
-
-
-
-
-
-
-
-
-
-
